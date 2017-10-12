@@ -1,0 +1,265 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.1">
+  <description></description>
+  <groupId>c2f6298f-015e-1000-8b60-bc2ab44477cc</groupId>
+  <name>Twitter</name>
+  <snippet>
+    <connections>
+      <id>82ffe360-3471-35ba-0000-000000000000</id>
+      <parentGroupId>c79b4f14-55bb-36c3-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>c79b4f14-55bb-36c3-0000-000000000000</groupId>
+        <id>45d67c96-b380-3584-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>c79b4f14-55bb-36c3-0000-000000000000</groupId>
+        <id>b410a1e6-8005-3e47-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <processors>
+      <id>b410a1e6-8005-3e47-0000-000000000000</id>
+      <parentGroupId>c79b4f14-55bb-36c3-0000-000000000000</parentGroupId>
+      <position>
+        <x>2.0</x>
+        <y>0.0</y>
+      </position>
+      <bundle>
+        <artifact>nifi-social-media-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Twitter Endpoint</key>
+            <value>
+              <name>Twitter Endpoint</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Consumer Key</key>
+            <value>
+              <name>Consumer Key</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Consumer Secret</key>
+            <value>
+              <name>Consumer Secret</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Access Token</key>
+            <value>
+              <name>Access Token</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Access Token Secret</key>
+            <value>
+              <name>Access Token Secret</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Languages</key>
+            <value>
+              <name>Languages</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Terms to Filter On</key>
+            <value>
+              <name>Terms to Filter On</name>
+            </value>
+          </entry>
+          <entry>
+            <key>IDs to Follow</key>
+            <value>
+              <name>IDs to Follow</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Locations to Filter On</key>
+            <value>
+              <name>Locations to Filter On</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Twitter Endpoint</key>
+            <value>Sample Endpoint</value>
+          </entry>
+          <entry>
+            <key>Consumer Key</key>
+            <value>VtjFiYLGXAQEEoeub9UVFBiPC</value>
+          </entry>
+          <entry>
+            <key>Consumer Secret</key>
+          </entry>
+          <entry>
+            <key>Access Token</key>
+            <value>1308943064-onEFXkG9QAIvBu2stE4xE3QTVmQAyYZhVMSNJfQ</value>
+          </entry>
+          <entry>
+            <key>Access Token Secret</key>
+          </entry>
+          <entry>
+            <key>Languages</key>
+          </entry>
+          <entry>
+            <key>Terms to Filter On</key>
+          </entry>
+          <entry>
+            <key>IDs to Follow</key>
+          </entry>
+          <entry>
+            <key>Locations to Filter On</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>GetTwitter</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.twitter.GetTwitter</type>
+    </processors>
+    <processors>
+      <id>45d67c96-b380-3584-0000-000000000000</id>
+      <parentGroupId>c79b4f14-55bb-36c3-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>221.0</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Directory</key>
+            <value>
+              <name>Directory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Conflict Resolution Strategy</key>
+            <value>
+              <name>Conflict Resolution Strategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Create Missing Directories</key>
+            <value>
+              <name>Create Missing Directories</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Count</key>
+            <value>
+              <name>Maximum File Count</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Modified Time</key>
+            <value>
+              <name>Last Modified Time</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Permissions</key>
+            <value>
+              <name>Permissions</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Owner</key>
+            <value>
+              <name>Owner</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Group</key>
+            <value>
+              <name>Group</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Directory</key>
+            <value>/tmp/</value>
+          </entry>
+          <entry>
+            <key>Conflict Resolution Strategy</key>
+            <value>fail</value>
+          </entry>
+          <entry>
+            <key>Create Missing Directories</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Maximum File Count</key>
+          </entry>
+          <entry>
+            <key>Last Modified Time</key>
+          </entry>
+          <entry>
+            <key>Permissions</key>
+          </entry>
+          <entry>
+            <key>Owner</key>
+          </entry>
+          <entry>
+            <key>Group</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>PutFile</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.PutFile</type>
+    </processors>
+  </snippet>
+  <timestamp>10/12/2017 10:35:39 UTC</timestamp>
+</template>
